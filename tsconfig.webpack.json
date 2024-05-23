@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "Node16",
+    "strict": true,
+    "esModuleInterop": true,
+    "declaration": false,
+  },
+  "files": ["webpack.config.ts"]
+}
