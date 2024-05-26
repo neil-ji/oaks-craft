@@ -6,7 +6,6 @@ import {
   ManyToOne,
   OneToMany,
   JoinColumn,
-  JoinTable,
 } from "typeorm";
 import { Article } from "./Article";
 
