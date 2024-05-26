@@ -6,6 +6,7 @@ import {
   JoinTable,
 } from "typeorm";
 import { Tag } from "./Tag";
+import { Category } from "./Category";
 
 /**
  * Article entity class.
@@ -34,6 +35,14 @@ export class Article {
   @ManyToMany(() => Tag)
   @JoinTable()
   tags: Tag[];
+
+  /**
+   * Categories associated with the article.
+   * @type {Category[]}
+   */
+  @ManyToMany(() => Category)
+  @JoinTable()
+  categories: Category[];
 
   /**
    * Content of the article.
