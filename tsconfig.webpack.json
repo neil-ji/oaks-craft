@@ -4,7 +4,7 @@
     "module": "Node16",
     "strict": true,
     "esModuleInterop": true,
-    "declaration": false,
+    "declaration": false
   },
   "files": ["webpack.config.ts"]
 }

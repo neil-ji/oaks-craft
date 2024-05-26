@@ -6,6 +6,12 @@
   "author": "Neil Ji",
   "license": "MIT",
   "dependencies": {
-    "sqlite3": "^5.1.7"
+    "reflect-metadata": "^0.1.14",
+    "sqlite3": "^5.1.7",
+    "typeorm": "0.3.20"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs"
   }
 }
