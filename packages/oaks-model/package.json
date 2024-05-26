@@ -2,16 +2,23 @@
   "name": "oaks-model",
   "version": "0.0.1",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "blog-engine",
+    "mvc",
+    "model",
+    "typeorm",
+    "sqlite3",
+    "reflect-metadata",
+    "nodejs",
+    "javascript",
+    "web-development",
+    "database"
+  ],
   "author": "Neil Ji",
   "license": "MIT",
   "dependencies": {
     "reflect-metadata": "^0.1.14",
     "sqlite3": "^5.1.7",
     "typeorm": "0.3.20"
-  },
-  "scripts": {
-    "start": "ts-node src/index.ts",
-    "typeorm": "typeorm-ts-node-commonjs"
   }
 }
