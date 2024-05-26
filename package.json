@@ -23,7 +23,8 @@
     "build:dev": "webpack --config webpack.config.ts --mode development",
     "build": "webpack --config webpack.config.ts --mode production",
     "lint": "eslint --fix .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=21.6.1",
