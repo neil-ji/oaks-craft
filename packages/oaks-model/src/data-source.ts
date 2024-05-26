@@ -1,7 +1,8 @@
 import "reflect-metadata";
 import { DataSource, DataSourceOptions } from "typeorm";
 
-const defaultOptions: DataSourceOptions = {
+// const defaultOptions: DataSourceOptions = {
+  const defaultOptions = {
   type: "sqlite",
   database: "oaks.db",
   synchronize: true,
