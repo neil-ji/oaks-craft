@@ -10,7 +10,7 @@ oaks-model 是一个包含多个基于 TypeORM 定义的实体类的库。它位
 npm install oaks-model
 ```
 
-接下来，你需要安装一个数据库驱动。在这里，我们使用轻量级的 sqlite3 数据库，但你可以选择任何 TypeORM 支持的数据库驱动。安装 sqlite3 可以使用以下命令：
+接下来，你需要安装一个数据库驱动。你可以选择任何 TypeORM 支持的数据库驱动，在以下示例中，我们使用轻量级的 sqlite3 数据库做演示:
 
 ```bash
 npm install sqlite3

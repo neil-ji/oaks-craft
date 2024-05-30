@@ -46,7 +46,7 @@ const injectModuleName = (moduleName: string): Configuration => {
 
 /** oaks-model */
 const oaksModelConfig: Configuration = merge(injectModuleName(OAKS_MODEL), {
-  externals: ["sqlite3", "typeorm", "reflect-metadata"],
+  externals: ["typeorm", "reflect-metadata"],
   externalsType: "commonjs",
   externalsPresets: {
     node: true,
