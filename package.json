@@ -20,11 +20,12 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "husky",
     "build:dev": "webpack --config webpack.config.ts --mode development",
     "build": "webpack --config webpack.config.ts --mode production",
     "lint": "eslint --fix .",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "doc": "lerna run doc"
   },
   "engines": {
     "node": ">=21.6.1",
@@ -60,6 +61,7 @@
     "semver": "^7.6.2",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
+    "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
