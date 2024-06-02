@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "description": "",
   "main": "src/index.ts",
-  "devDependencies": {},
   "author": "Neil Ji",
   "license": "MIT",
   "scripts": {
     "doc": "typedoc"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
   }
 }

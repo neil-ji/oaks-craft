@@ -1,19 +1,12 @@
-import js from "@eslint/js";
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import tseslint from "typescript-eslint";
 
 export default [
-  // Ignore node_modules and dist folders
+  { languageOptions: { globals: globals.browser } },
+  pluginJs.configs.recommended,
   {
-    ignores: ["node_modules/", "dist/"],
+    ignores: ["dist/"],
   },
-
-  // Use recommended rules
-  js.configs.recommended,
-
-  // Use recommended rules for TypeScript
-  {
-    rules: {
-      "no-unused-vars": "warn",
-      "no-undef": "warn",
-    },
-  },
+  ...tseslint.configs.recommended,
 ];

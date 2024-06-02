@@ -1,9 +1,26 @@
+import fs from "fs";
 import path from "path";
 import { Configuration } from "webpack";
 import { merge } from "webpack-merge";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 
+/**
+ * Module Name
+ */
+
 const OAKS_MODEL = "oaks-model";
+
+/**
+ * Alias
+ */
+const alias = {};
+const packagesDir = path.resolve(__dirname, "packages");
+
+fs.readdirSync(packagesDir).forEach((dir) => {
+  if (fs.statSync(path.join(packagesDir, dir)).isDirectory()) {
+    alias[`@packages/${dir}`] = path.join(packagesDir, dir, "src");
+  }
+});
 
 /** Common Configuration */
 const injectModuleName = (moduleName: string): Configuration => {
@@ -30,6 +47,7 @@ const injectModuleName = (moduleName: string): Configuration => {
     },
     resolve: {
       extensions: [".ts", ".js"],
+      alias,
     },
     plugins: [
       new CopyWebpackPlugin({
@@ -53,4 +71,16 @@ const oaksModelConfig: Configuration = merge(injectModuleName(OAKS_MODEL), {
   },
 });
 
-export default [oaksModelConfig];
+/** oaks-service */
+const oaksServiceConfig: Configuration = merge(
+  injectModuleName("oaks-service"),
+  {
+    externals: ["oaks-model"],
+    externalsType: "commonjs",
+    externalsPresets: {
+      node: true,
+    },
+  },
+);
+
+export default [oaksModelConfig, oaksServiceConfig];
