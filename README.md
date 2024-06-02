@@ -7,7 +7,7 @@ Oaks Craft 是一个开发中的渐进式博客引擎，目的是简单易用，
 核心模块：
 
 [x] oaks-model
-[] oaks-service
+[x] oaks-service
 [] oaks-controller
 [] oaks-view
 
